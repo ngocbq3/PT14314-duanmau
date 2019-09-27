@@ -1,6 +1,6 @@
 <?php
     $rows = loai_select_all();
-    //var_dump($rows);
+   
 
 ?>
 <table class="table">
