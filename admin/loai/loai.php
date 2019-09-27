@@ -1,6 +1,7 @@
 <?php
     $rows = loai_select_all();
     //var_dump($rows);
+    //demo tesst
 ?>
 <table class="table">
   <thead>
