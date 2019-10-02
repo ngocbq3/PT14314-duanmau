@@ -21,5 +21,16 @@ function loai_insert($ten_loai) {
     insert('loai', $array);
 }
 
+//hàm sửa loại hàng
+function loai_edit($ma_loai, $ten_loai) {
+    $array = [
+        'ten_loai' => $ten_loai
+    ];
+    update('loai', $array, 'ma_loai', $ma_loai);
+}
 
+//Hàm xóa loại hàng
+function loai_delete($ma_loai) {
+    delete('loai', 'ma_loai', $ma_loai);
+}
 ?>
