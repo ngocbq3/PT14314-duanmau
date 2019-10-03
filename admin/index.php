@@ -1,5 +1,6 @@
 <?php
     require_once("../lib/loai.php");//Thêm thư viện
+    require_once("../lib/hang_hoa.php");//Thêm thư viện
     $action = isset($_GET['action']) ? $_GET['action'] : "home";
     $view = isset($_GET['view']) ? $_GET['view'] : false ;
     //Xây dựng đường dẫn cho file
