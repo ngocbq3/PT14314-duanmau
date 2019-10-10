@@ -57,7 +57,7 @@ $items = query($sql);
     </div>
   </div>
   <div class="col-md-6 col-lg-3">
-    <div class="widget-small info coloured-icon"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
+    <div class="widget-small info coloured-icon"><i class="icon fa fa-file-text fa-3x"></i>
       <div class="info">
         <h4><a href="?action=loai&view=list">Loại hàng</a> </h4>
         <p><b><?= $loai_soluong[0]['so_luong'] ?></b></p>

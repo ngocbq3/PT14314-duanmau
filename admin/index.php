@@ -4,6 +4,12 @@
     if ( !isset($_SESSION['tai_khoan']) ) {
         header("location: login.php");
     }
+    if (isset($_GET['btn_logout'])) {
+        if ( $_GET['btn_logout'] == 'on') {
+            session_destroy();
+            header("location: login.php");
+        }
+    }
     require_once("../lib/loai.php");//Thêm thư viện
     require_once("../lib/hang_hoa.php");//Thêm thư viện
     $action = isset($_GET['action']) ? $_GET['action'] : "home";
