@@ -1,41 +1,36 @@
+<?php
+$product_special = hang_hoa_dac_biet(5);
+$count = count($product_special);
+?>
 <div class="slider">
 
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" class="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
+            <?php
+                $active = "active";
+                for ($i=0;$i<$count;$i++) : ?>
+                   <li data-target="#demo" data-slide-to="<?=$i?>" class="<?=$active?>"></li> 
+            <?php $active = "";?>
+            <?php endfor; ?>
+            
         </ul>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="#">
-                    <img src="content/images/products/1002.jpg" alt="1002">
-                    <div class="carousel-caption">
-                        <h3>Đồng hồ Tissot</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eos voluptatem
-                            dicta?</p>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a href="#">
-                    <img src="content/images/products/1003.jpg" alt="1003">
-                    <div class="carousel-caption">
-                        <h3>Đồng hồ Pellca</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, nostrum.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a href="#">
-                    <img src="content/images/products/1001.jpg" alt="1001">
-                    <div class="carousel-caption">
-                        <h3>Laptop Dell 3558</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptas earum fugiat
-                            expedita?</p>
-                    </div>
-                </a>
-            </div>
+            <?php
+            $active = "active";
+            foreach ($product_special as $ps) :
+                ?>
+                <div class="carousel-item <?=$active?>">
+                    <a href="#">
+                        <img src="content/images/products/<?=$ps['hinh']?>" alt="1002">
+                        <div class="carousel-caption">
+                            <h3><?=$ps['ten_hh']?></h3>
+                            <p>Đơn giá: <?=$ps['don_gia']?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php $active=""; ?>
+            <?php endforeach; ?>
+            
         </div>
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>

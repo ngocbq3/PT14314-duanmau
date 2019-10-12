@@ -1,6 +1,7 @@
 <?php
     //require_once("lib/database.php");
-    include_once("lib/loai.php");
+    require_once("lib/loai.php");
+    require_once("lib/hang_hoa.php");
     //Kiểm tra hành động khi người dùng vào trang web
     //Nếu action có tồn tại thì lấy nó là $action còn lại nó bằng home
     $action = isset($_GET['action']) ? $_GET['action'] : "home";

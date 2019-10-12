@@ -20,7 +20,12 @@ function hang_hoa_per_page($start_record, $record_per_page) {
     $sql = "SELECT * FROM hang_hoa ORDER BY ma_hh DESC LIMIT $start_record, $record_per_page";
     return query($sql);
 }
-
+//Hàm hiển thị các sản phẩm đặc biệt
+//Số sản phẩm hiển thị
+function hang_hoa_dac_biet($number) {
+    $sql = "SELECT * FROM `hang_hoa` WHERE dac_biet=1 ORDER BY ma_hh DESC LIMIT 0, $number";
+    return query($sql);
+}
 //Hàm tính tổng số bản ghi trong bảng hang_hoa
 function hang_hoa_total_record() {
     $records = hang_hoa_list_all();
