@@ -8,6 +8,7 @@
     require_once("site/header.php");
     switch ($action) {
         case "home":
+            require_once("site/slider.php");
             require_once("site/home.php");
             break;
         case "product":

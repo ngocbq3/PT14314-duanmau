@@ -1,0 +1,140 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto 20px;
+    border-top: 2px solid olivedrab;
+}
+.header {
+    width: 100%;
+    padding: 0 20px 20px;
+    background: brown;
+}
+.menu {
+    width: 100%;
+    line-height: 50px;
+    height: 90px;
+    padding-top: 30px;
+}
+
+.logo {
+    float: left;
+    color: #fff;
+    font-size: 35px;
+}
+
+.menu nav {
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    line-height: 40px;
+}
+
+
+.menu nav ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.menu nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+.menu nav a:hover {
+    background: green;
+    border-radius: 10px;
+}
+.menu nav ul ul{
+    position: absolute;
+    width: 150px;
+    background:gold;
+    display: none;
+    border-radius: 10px;
+}
+.menu nav ul ul li{
+    display: block;
+}
+.menu nav ul ul li a:hover{
+    border-radius: 0;
+}
+.menu nav ul li:hover ul {
+    display: block;
+    z-index: 9999;
+}
+.carousel-item {
+    text-align: center !important;
+}
+
+div.product {
+    width: 100%;
+    margin: 0px auto;
+    background: crimson;
+    padding: 60px;
+}
+
+div.items {
+    width: 23%;
+    float: left;
+    margin: 10px 1%;
+    text-align: center;
+}
+
+div.items a {
+    display: block;
+    background: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+div.items a:hover {
+    background: paleturquoise;
+}
+
+div.items a img {
+    width: 70%;
+}
+
+div.clear {
+    clear: both;
+}
+div.items h3{
+    color: #000;
+}
+
+div.items:nth-child(4n+1) {
+    clear: left;
+}
+
+.footer {
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    background: #666;
+    text-align: center;
+    color: #fff;
+}
+.slider {
+    width: 100%;
+    background:brown;
+    padding: 10px 0;
+    color: #000;
+    border-top: 1px solid gold;
+}
+#mySlide {
+    background: rgba(0,0,0, .6);
+}
+.carousel-inner img {
+    margin: 0 auto;
+    height: 400px !important;
+}
+
+.carousel-caption {
+    background: rgba(0,0,0, .4);
+   
+}
