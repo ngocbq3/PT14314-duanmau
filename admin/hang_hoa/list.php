@@ -37,9 +37,10 @@ $total_page = ceil($total_record / $record_per_page);
                     <tr>
                         <th scope="col">Mã hàng</th>
                         <th scope="col">Tên hàng</th>
+                        <th scope="col">Loại hàng</th>
                         <th scope="col">Hình ảnh</th>
                         <th scope="col">Đơn giá</th>
-
+                        <th scope="col">Đặc biệt</th>
                         <th scope="col">Tác vụ</th>
                     </tr>
                 </thead>
@@ -50,9 +51,10 @@ $total_page = ceil($total_record / $record_per_page);
                         <tr>
                             <th scope="row"><?= $row['ma_hh'] ?></th>
                             <td><?= $row['ten_hh'] ?></td>
-
+                            <td><?= $row['ten_loai'] ?></td>
                             <td><img width="110" src="../content/images/products/<?= $row['hinh'] ?>" alt=""></td>
                             <td><?= $row['don_gia'] ?></td>
+                            <td><?= $row['dac_biet'] ?></td>
                             <td>
                                 <a class="btn" href="?action=hang_hoa&view=edit&ma_hh=<?= $row['ma_hh'] ?>">Sửa</a>
                                 <a onclick="return confirm('Bạn có chắc xóa không')" class="btn" href="?action=hang_hoa&view=list&ma_hh=<?= $row['ma_hh'] ?>">Xóa</a>

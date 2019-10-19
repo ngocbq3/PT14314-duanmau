@@ -17,7 +17,7 @@ function hang_hoa_list_one($ma_hh) {
 //Lấy ra $record_per_page trên một trang
 //Bắt đầu từ $start_record
 function hang_hoa_per_page($start_record, $record_per_page) {
-    $sql = "SELECT * FROM hang_hoa ORDER BY ma_hh DESC LIMIT $start_record, $record_per_page";
+    $sql = "SELECT * FROM hang_hoa INNER JOIN loai ON hang_hoa.ma_loai=loai.ma_loai ORDER BY ma_hh DESC LIMIT $start_record, $record_per_page";
     return query($sql);
 }
 //Hàm hiển thị các sản phẩm đặc biệt

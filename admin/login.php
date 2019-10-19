@@ -34,6 +34,7 @@
                 $message = "Bạn nhập sai mật khẩu hoặc tài khoản";
             } else {
                 $_SESSION['tai_khoan'] = $result['ma_kh'];
+                $_SESSION['hinh'] = $result['hinh'];
                 //Trường hợp người dùng nhấn vào nhớ mật khẩu thì lưu lại mật khẩu vào cookie
                 if (isset($remember) ) {                  
                   setcookie('user', $ma_kh, time() + 60*60*24*30 );

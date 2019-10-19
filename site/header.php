@@ -20,7 +20,7 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#">TRANG CHỦ</a></li>
+                        <li><a href="index.php">TRANG CHỦ</a></li>
                         <li><a href="#">SẢN PHẨM</a>
                             <ul>
                                 <li><a href="#">Iphone</a></li>
